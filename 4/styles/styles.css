@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "PT Sans", "Arial";
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "PT Sans", "Arial";
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
@@ -20,7 +20,7 @@ html {
 
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
   background: #F2F2F2;
@@ -31,22 +31,44 @@ body {
   min-height: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .navigation {
   display: flex;
   margin: 0 auto;
   width: 1200px;
   background: #FFFFFF;
+  align-items: center;
 }
 
+.header-logo {
+  margin-bottom: -10px;
+  z-index: 1;
+  margin-left: 70px;
+}
+
+
 .navigation-list {
-  width: 480px;
+  display: flex;
   margin: 0;
   padding: 0;
+  gap: 38px;
+  list-style-type: none;
 }
 
 .navigation-user {
-  max-width: 300px;
   margin-left: auto;
+  gap: 33px;
+  margin-right: 70px;
 }
 
 .navigation-link {
@@ -60,14 +82,17 @@ body {
 }
 
 .main-container {
- flex-grow: 1;
+  flex-grow: 1;
 }
 
 .main-picture {
   background-image: url("../images/index-background-sedona.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
+
 .main-picture-mountains {
   display: block;
   margin: 0 auto;
@@ -78,36 +103,54 @@ body {
   margin: 0 auto;
   background: #FFFFFF;
 }
+
 .about-sedona-tower {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 0;
+  padding-top: 69px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
 
+.about-sedona-tower-white {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 69px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
 
 .sedona-advantages {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin: 0;
+  padding-bottom: 90px;
+  padding-top: 25px;
 }
 
 .advantages-list {
- width: 1200px;
- margin: 0;
- padding: 0;
- display: flex;
- flex-wrap: wrap;
- justify-content: space-between;
-
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .advantages-item-blue {
   color: #FFFFFF;
   background: #82B3D3;
   text-align: center;
-  width: 400px;
 }
 
 .advantages-item-road {
@@ -120,6 +163,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  width: 1200px;
 }
 
 .advantages-item-lightblue {
@@ -128,8 +172,8 @@ body {
 }
 
 .service-food {
-  width: 400px;
   background: #FFFFFF;
+  width: 400px;
 }
 
 .advantages-title {
@@ -138,17 +182,29 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 62px;
+  padding-top: 103px;
 }
 
-.advantages-description,
+.advantages-description {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 121px;
+  text-align: center;
+}
+
 .letter-form {
   text-align: center;
+  padding-bottom: 104px;
 }
 
 .feet-back {
   width: 1200px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   background: #FFFFFF;
+  padding-bottom: 96px;
 }
 
 .mail {
@@ -156,7 +212,14 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   width: 1200px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-social-list {
+  display: flex;
+  text-decoration: none;
+  margin-right: 70px;
 }
 
 .footer-contacts {
@@ -175,20 +238,48 @@ body {
   width: 1200px;
   margin: 0 auto;
   background: #FFFFFF;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.advantages-description-mail {
+  text-align: center;
+  padding-bottom: 56px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+.advantages-description-mail-white {
+  text-align: center;
+  padding-bottom: 56px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #FFFFFF;
 }
 
 .footer-social {
-  width: 145px;
-  margin: 0;
+  width: 142px;
+  margin-left: 70px;
+  padding-top: 45px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-social-item {
+  width: 47px;
+  height: 40px;
 }
 
 .footer-contacts {
-  width: 720px;
+  width: 331px;
   margin-left: 237px;
 }
+
 .academy-link {
   max-width: 115px;
-  margin-left: auto;
+  margin-right: 70px;
+  margin-left: 236px;
 }
 
 .button-header {
@@ -213,6 +304,7 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  margin-left: 412px
 }
 
 .button-letter {
@@ -225,14 +317,23 @@ body {
   text-transform: uppercase;
 }
 
+
 .main-inner {
   background-image: url("../images/catalog/background-catalog.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  width: 1200px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
 }
 
 .inner-header {
   color: #FFFFFF;
+  margin-left: 70px;
+}
+
+.breadcrums {
+  display: flex;
 }
 
 .breadcrums-item,
@@ -242,15 +343,47 @@ body {
   color: inherit;
 }
 
+.hotels-list {
+  list-style-type: none;
+}
+
+.container-catalog-filter {
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+}
+
+.container-catalog-filter-button {
+  display: flex;
+  flex-flow: column;
+}
+
+.container-catalog-results {
+  display: flex;
+  width: 1200px;
+}
+
+
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
+.catalog-filter-services {
+  border: 0;
+  list-style-type: none;
+}
+
+
 .catalog-filter-item {
   font-size: 18px;
   line-height: 23px;
+}
+
+.result {
+  background: #FFFFFF;
+  width: 1200px;
 }
 
 .search-result {
@@ -289,4 +422,24 @@ body {
 .chosen-hotel-card,
 .button-catalog {
   background-color: #82B3D3;
+}
+
+.mail-catalog {
+  background-color: #FFFFFF;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.mailing-list {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 69px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
